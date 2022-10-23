@@ -17,6 +17,8 @@ package videoshop.catalog;
 
 import jakarta.validation.Valid;
 import jakarta.validation.constraints.NotEmpty;
+import org.springframework.data.domain.Sort;
+import org.springframework.data.repository.query.Param;
 import videoshop.catalog.Disc.DiscType;
 
 import java.time.LocalDateTime;
@@ -66,6 +68,13 @@ class CatalogController {
 		model.addAttribute("catalog", catalog.findByType(DiscType.BLURAY));
 		model.addAttribute("title", "catalog.bluray.title");
 
+		return "catalog";
+	}
+
+	@GetMapping("/all")
+	String action(Model model) {
+		model.addAttribute("catalog", catalog.findAll(Sort.by("name")));
+		model.addAttribute("title", "catalog.all.title");
 		return "catalog";
 	}
 

@@ -42,6 +42,8 @@ public class Disc extends Product {
 	private String genre, image;
 	private DiscType type;
 
+
+
 	// (｡◕‿◕｡)
 	// Jede Disc besitzt mehrere Kommentare, eine "1 zu n"-Beziehung -> @OneToMany für JPA
 	// cascade gibt an, was mit den Kindelementen (Comment) passieren soll wenn das Parentelement
@@ -86,4 +88,6 @@ public class Disc extends Product {
 	public DiscType getType() {
 		return type;
 	}
+
+
 }

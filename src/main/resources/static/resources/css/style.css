@@ -17,3 +17,35 @@ img.thumbnail {
 	width: 160px;
 	display: block;
 }
+
+.subnav {
+	float: left;
+	overflow: hidden;
+}
+
+.subnav-content {
+	list-style-type: none;
+	padding: 2px 3px;
+    display: none;
+	position: absolute;
+	top: 245px;
+	width: 92px;
+	z-index: 1;
+	background-color: #F7f7f7;
+}
+
+
+.subnav-content a {
+	float: left;
+	color: black;
+	padding: 0;
+	width: 87px;
+	text-decoration: none;
+}
+.subnav-content a:hover {
+	background-color: #f1f1f1;
+}
+
+.subnav:hover .subnav-content {
+	display: block;
+}
